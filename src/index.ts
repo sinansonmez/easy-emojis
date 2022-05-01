@@ -15,6 +15,5 @@ export const letterToEmoji = (letter: string): string => {
 };
 
 export const emojiToLetter = (emoji: string): string => {
-  if (emoji.length !== 1) throw new Error('emojiToLetter: emoji must be a single character');
   return String.fromCodePoint(emoji.codePointAt(0)! - OFFSET);
 };

@@ -1,4 +1,4 @@
-import { countryCodeToFlag, flagToCountryCode, letterToEmoji } from '../index';
+import {countryCodeToFlag, emojiToLetter, flagToCountryCode, letterToEmoji} from '../index';
 
 test('countryCodeToEmoji', () => {
   expect(countryCodeToFlag('US')).toBe('🇺🇸');
@@ -25,17 +25,5 @@ test('letterToEmoji with input less than single character', () => {
 });
 
 test('emojiToLetter', () => {
-  expect(letterToEmoji('🇦')).toBe('A');
-});
-
-test('emojiToLetter with input more than single character', () => {
-  expect(() => {
-    letterToEmoji('🇦🇦');
-  }).toThrow('emojiToLetter: emoji must be a single character');
-});
-
-test('emojiToLetter with input less than single character', () => {
-  expect(() => {
-    letterToEmoji('');
-  }).toThrow('emojiToLetter: emoji must be a single character');
+  expect(emojiToLetter('🇦')).toBe('A');
 });
