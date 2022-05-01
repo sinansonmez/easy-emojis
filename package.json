@@ -1,7 +1,7 @@
 {
   "name": "easy-emojis",
   "version": "1.0.0",
-  "description": "A simple library to create flag emojis from country codes or vice versa",
+  "description": "A simple library to create emojis (flag or letter)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
