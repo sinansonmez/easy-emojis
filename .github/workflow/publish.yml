@@ -15,7 +15,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
         run: npm ci && npm run build
-      - name: Publish package on NPM 📦
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v3.0.1
+        with:
+          access: public
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
