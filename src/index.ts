@@ -1,3 +1,5 @@
+import emojis from "./emojis";
+
 // offset between uppercase ascii and regional indicator symbols
 const OFFSET = 127397;
 
@@ -17,3 +19,8 @@ export const letterToEmoji = (letter: string): string => {
 export const emojiToLetter = (emoji: string): string => {
   return String.fromCodePoint(emoji.codePointAt(0)! - OFFSET);
 };
+
+export const getRandomEmoji = (): string => {
+  const randomIndex = Math.floor(Math.random() * emojis.length);
+  return emojis[randomIndex].unicode;
+}
