@@ -18,9 +18,17 @@ countryCodeToFlag('US'); // returns '🇺🇸'
 flagToCountryCode('🇺🇸'); // returns 'US'
 
 
-const { letterToEmoji, emojiToLetter } = require('easy-emojis');
+const { letterToEmoji, emojiToLetter, getRandomEmoji } = require('easy-emojis');
 letterToEmoji('S'); // returns '🇸'
 emojiToLetter('🇸') // returns 'S'
+
+const { getRandomEmoji } = require('easy-emojis');
+getRandomEmoji(); // should return a random emoji
+```
+## alternative importing
+```javascript
+import * as EasyEmojis from 'easy-emojis';
+EasyEmojis.countryCodeToFlag('US'); // returns '🇺🇸'
 ```
 
 ### Run tests
