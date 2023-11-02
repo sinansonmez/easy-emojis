@@ -13,22 +13,21 @@ npm install easy-emojis
 
 ## usage
 ```javascript
-const { countryCodeToFlag, emojiCountryCode } = require('easy-emojis');
-countryCodeToFlag('US'); // returns '🇺🇸'
-flagToCountryCode('🇺🇸'); // returns 'US'
-
-
-const { letterToEmoji, emojiToLetter, getRandomEmoji } = require('easy-emojis');
-letterToEmoji('S'); // returns '🇸'
-emojiToLetter('🇸') // returns 'S'
-
-const { getRandomEmoji } = require('easy-emojis');
-getRandomEmoji(); // should return a random emoji
-```
-## alternative importing
-```javascript
 import * as EasyEmojis from 'easy-emojis';
 EasyEmojis.countryCodeToFlag('US'); // returns '🇺🇸'
+EasyEmojis.flagToCountryCode('🇺🇸'); // returns 'US'
+
+EasyEmojis.letterToEmoji('S'); // returns '🇸'
+EasyEmojis.emojiToLetter('🇸') // returns 'S'
+
+EasyEmojis.getRandomEmoji(); // should return a random emoji
+
+EasyEmojis.getEmojiByName('red apple'); // should return '🍎'
+EasyEmojis.getEmojiByShortName(':apple:'); // should return '🍎'
+
+// getEmoji both accepts name and short name
+EasyEmojis.getEmoji('red apple'); // should return '🍎'
+EasyEmojis.getEmoji(':apple:'); // should return '🍎'
 ```
 
 ### Run tests

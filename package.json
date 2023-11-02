@@ -1,6 +1,6 @@
 {
   "name": "easy-emojis",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple library to create emojis (flag or letter)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,11 +9,11 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
