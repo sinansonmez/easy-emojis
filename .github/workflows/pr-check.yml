@@ -3,16 +3,6 @@ on:
   pull_request:
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: install
-        run: npm ci
-  
   check-lint:
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +16,6 @@ jobs:
         run: npm run lint
 
   check-types:
-      needs: install
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
@@ -49,7 +38,6 @@ jobs:
           run: npm run test
 
   build:
-      needs: install
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
