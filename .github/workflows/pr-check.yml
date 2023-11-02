@@ -1,0 +1,28 @@
+name: PR Template
+on:
+  pull_request:
+
+jobs:
+  check-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lint
+        run: npm run lint
+
+  check-types:
+      runs-on: ubuntu-latest
+      steps:
+        - name: typle
+          run: npm run build
+
+  test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: test
+          run: npm run test
+
+  build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: build
+          run: npm run prepare
