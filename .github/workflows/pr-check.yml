@@ -2,9 +2,6 @@ name: PR Checks
 on:
   pull_request:
 
-concurrency:
-  group: ${{ github.ref }}
-
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -17,6 +14,7 @@ jobs:
         run: npm ci
   
   check-lint:
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,6 +25,7 @@ jobs:
         run: npm run lint
 
   check-types:
+      needs: install
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
@@ -37,6 +36,7 @@ jobs:
           run: npm run build
 
   test:
+      needs: install
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
@@ -47,6 +47,7 @@ jobs:
           run: npm run test
 
   build:
+      needs: install
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
