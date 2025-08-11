@@ -1,6 +1,7 @@
 // todo
 // update readme
 // publish new version
+// remove package-lock.json and insert ci
 
 export enum EmojiReplaceMode {
   CONSERVATIVE = 'conservative',
