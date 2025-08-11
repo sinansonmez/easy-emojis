@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
+      - run: npm i
       - run: npm run build
       - name: Publish to npm
         uses: JS-DevTools/npm-publish@v3.0.1
