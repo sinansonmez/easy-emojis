@@ -1,5 +1,13 @@
-import emojis from "./emojis";
-import { isShortName } from "./utils";
+import emojis from './emojis';
+import { isShortName } from './utils';
+export {
+  EmojiCategories,
+  EmojiReplaceMode,
+  EmojiReplaceOptions,
+  EmojiReplacement,
+  EmojiReplaceResult,
+  replaceTextWithEmojis,
+} from './replaceText';
 
 // offset between uppercase ascii and regional indicator symbols
 const OFFSET = 127397;
@@ -24,7 +32,7 @@ export const emojiToLetter = (emoji: string): string => {
 export const getRandomEmoji = (): string => {
   const randomIndex = Math.floor(Math.random() * emojis.length);
   return emojis[randomIndex].unicode;
-}
+};
 
 export const getEmoji = (emoji: string): string => {
   if (isShortName(emoji)) {
@@ -32,28 +40,28 @@ export const getEmoji = (emoji: string): string => {
   } else {
     return getEmojiByName(emoji);
   }
-}
+};
 
 export const getEmojiByName = (emojiName: string): string => {
-  const foundEmoji = emojis.find(emoji => emoji.name === emojiName?.toLowerCase());
+  const foundEmoji = emojis.find((emoji) => emoji.name === emojiName?.toLowerCase());
   if (foundEmoji) {
-    return foundEmoji.emoji
+    return foundEmoji.emoji;
   } else {
-    console.warn("emoji not found with name: ", emojiName)
-    return ""
+    console.warn('emoji not found with name: ', emojiName);
+    return '';
   }
-}
+};
 
 export const getEmojiByShortName = (emojiShortName: string): string => {
   if (!isShortName(emojiShortName.toLowerCase())) {
-    console.error("you didnt pass a short name. Please pass correct short name like :apple: or use getEmojiByName")
-    return ""
+    console.error('you didnt pass a short name. Please pass correct short name like :apple: or use getEmojiByName');
+    return '';
   }
-  const foundEmoji = emojis.find(emoji => emoji.shortname === emojiShortName?.toLowerCase());
+  const foundEmoji = emojis.find((emoji) => emoji.shortname === emojiShortName?.toLowerCase());
   if (foundEmoji) {
-    return foundEmoji.emoji
+    return foundEmoji.emoji;
   } else {
-    console.warn("emoji not found with name: ", emojiShortName)
-    return ""
+    console.warn('emoji not found with name: ', emojiShortName);
+    return '';
   }
-}
+};
