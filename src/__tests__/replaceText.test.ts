@@ -266,7 +266,7 @@ describe('replaceTextWithEmojis', () => {
 
         expect(result.stats.averageConfidence).toBeCloseTo(manualAverage, 5);
 
-        const uniqueCategories = Array.from(new Set(result.replacements.map(r => r.category)));;
+        const uniqueCategories = Array.from(new Set(result.replacements.map(r => r.category)));
         expect(result.stats.categoriesUsed).toEqual(expect.arrayContaining(uniqueCategories));
       }
     });
@@ -411,10 +411,3 @@ describe('Helper functions and utilities', () => {
   });
 
 });
-
-// Mock data for testing
-const mockEmojisData = [
-  { name: 'pizza', shortname: ':pizza:', emoji: '🍕', unicode: 'U+1F355' },
-  { name: 'coffee', shortname: ':coffee:', emoji: '☕', unicode: 'U+2615' },
-  { name: 'heart', shortname: ':heart:', emoji: '❤️', unicode: 'U+2764' }
-];

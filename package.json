@@ -1,11 +1,11 @@
 {
   "name": "easy-emojis",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A simple library to create emojis (flag or letter)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest --config jestconfig.json",
+    "test": "jest --config jest.config.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",

@@ -7,6 +7,10 @@ export {
   EmojiReplacement,
   EmojiReplaceResult,
   replaceTextWithEmojis,
+  replaceTextSubtle,
+  replaceTextBalanced,
+  replaceTextExpressive,
+  replaceTextSmart
 } from './replaceText';
 
 // offset between uppercase ascii and regional indicator symbols

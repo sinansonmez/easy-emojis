@@ -1,8 +1,3 @@
-// todo
-// update readme
-// publish new version
-// remove package-lock.json and insert ci
-
 export enum EmojiReplaceMode {
   CONSERVATIVE = 'conservative',
   MODERATE = 'moderate',
@@ -298,9 +293,7 @@ function getModeDefaults(mode: EmojiReplaceMode): Pick<EmojiReplaceOptions, 'con
           EmojiCategories.NATURE,
           EmojiCategories.ANIMAL,
           EmojiCategories.TECH,
-          EmojiCategories.TRANSPORT,
-          EmojiCategories.TIME,
-          EmojiCategories.PHRASE,
+          EmojiCategories.PHRASE
         ],
       };
     case EmojiReplaceMode.AGGRESSIVE:
