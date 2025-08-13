@@ -13,6 +13,8 @@ export {
   replaceTextSmart
 } from './replaceText';
 
+export { searchEmojis, getSearchCategories } from './search'
+
 // offset between uppercase ascii and regional indicator symbols
 const OFFSET = 127397;
 
