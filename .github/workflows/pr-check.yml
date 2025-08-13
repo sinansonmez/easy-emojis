@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: 18
       - name: install
-        run: npm ci
+        run: npm i
       - name: lint
         run: npm run lint
 
@@ -33,7 +33,7 @@ jobs:
           with:
             node-version: 18
         - name: install
-          run: npm ci
+          run: npm i
         - name: test
           run: npm run test
 
