@@ -37,7 +37,7 @@ export const emojiToLetter = (emoji: string): string => {
 
 export const getRandomEmoji = (): string => {
   const randomIndex = Math.floor(Math.random() * emojis.length);
-  return emojis[randomIndex].unicode;
+  return emojis[randomIndex].emoji;
 };
 
 export const getEmoji = (emoji: string): string => {
